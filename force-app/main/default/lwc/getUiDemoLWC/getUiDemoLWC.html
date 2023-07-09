@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Get UI List Api Demo">
+        <div class="slds-var-p-around_medium">
+            <table class="slds-table slds-table_cell_buffer slds-table_buffered">
+                <thead>
+                    <tr>
+                        <td>Title</td>
+                        <td>Name</td>
+                        <td>Email</td>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={contacts} for:item="contact">
+                        <tr key={contact.fields.Id.Value}>
+                            <td>{contact.fields.Title.value}</td>
+                            <td>{contact.fields.Name.value}</td>
+                            <td>{contact.fields.Email.value}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </lightning-card>
+</template>

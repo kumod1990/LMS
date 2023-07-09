@@ -1,0 +1,39 @@
+<template>
+   <lightning-card title="Lightning Record form Demo">
+    <lightning-record-form
+    object-api-name={objectName}
+    fields={listFields}
+    onsuccess={successHandler}>
+ </lightning-record-form>
+   </lightning-card> 
+   <lightning-card title="Lightning Record form read only mode Demo">
+    <lightning-record-form
+    record-id="0015g00001G63DCAAZ"
+    object-api-name={objectName}
+    fields={listFields}
+    mode="readOnly"
+    >
+ </lightning-record-form>
+ 
+   </lightning-card>
+   <lightning-card title="Lightning Record form view mode Demo">
+    <lightning-record-form
+    record-id="0015g00001G63DCAAZ"
+    object-api-name={objectName}
+    fields={listFields}
+    mode="view"
+    columns="2"
+    >
+ </lightning-record-form>
+   </lightning-card>
+   <lightning-card title="Lightning Record form compact layer Demo">
+    <lightning-record-form
+    record-id={recordId}
+    object-api-name={objectApiName}
+    mode="edit"
+    columns="2"
+    layout-type="Compact"
+    >
+ </lightning-record-form>
+   </lightning-card>
+</template>

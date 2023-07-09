@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="LDS With Wire Adoptor Function">
+        <div class="slds-var-p-around_medium">
+        <template if:true={userDetail}>
+            <p><strong>User Name :</strong>{userDetail.Name.value}</p>
+            <p><strong>Email :</strong>{userDetail.Email.value}</p>
+        </template>
+        </div>
+    </lightning-card>
+    <lightning-card title="LDS With Wire Adoptor Properties">
+        <div class="slds-var-p-around_medium">
+        <template if:true={userDetailProperty.data}>
+            <p><strong>User Name :</strong>{userDetailProperty.data.fields.Name.value}</p>
+            <p><strong>Email :</strong>{userDetailProperty.data.fields.Email.value}</p>
+        </template>
+        </div>
+    </lightning-card>
+</template>
